@@ -7,3 +7,14 @@ br {
     display: block;
     height: 0;
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.headerContents {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
