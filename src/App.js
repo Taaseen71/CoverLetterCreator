@@ -53,7 +53,7 @@ function App() {
     return (
         <div className="fullPage">
             <header className="header">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autocomplete="off">
                     <p className="headerContents">Saadat Taaseen </p>
                     <label className="headerContents">
                         Position Name:
