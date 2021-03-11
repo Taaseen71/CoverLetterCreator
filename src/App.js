@@ -49,7 +49,11 @@ function App() {
 
     const paragraph4 = `I have a good understanding of Front-End Development using Vanilla JavaScript and React.js (both class-based Components and Hooks) and have built web-pages with responsive cross browser and device responsive development. I also have experience in Full Stack development that requires understanding of React, Node, NPM packages, Express and MongoDB databases and various operating systems like Windows, Mac OS and basic terminal based Linux environments. I am confident that my knowledge and experiences will make me an excellent candidate for the ${positionName} position at ${companyName}. Thank you for your time and consideration.`
 
-
+    const whyGoodFit = `Why do you think you are a good fit for this company?`
+    
+    const whyGoodFitAnswer = `I work extremely well under pressure. I am primarily here to learn all that I can and apply that knowledge to my role, and help the team and the company achieve its goals. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.`
+    
+    
     return (
         <div className="fullPage">
             <header className="header">
@@ -95,10 +99,9 @@ function App() {
                 <br />
                 <br />
                 <br />
-                <br />
-                    
-                <p>"Why do you think you are a good fit for this company?"<p>
-                <p>"I work extremely well under pressure. I am primarily here to learn all that I can and apply that knowledge to my role, and help the team and the company achieve its goals. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations."<p>
+                <br /> 
+                <p>{whyGoodFit}<p>
+                <p>{whyGoodFitAnswer}<p>
             </body>
 
         </div>
