@@ -100,8 +100,8 @@ function App() {
                 <br />
                 <br />
                 <br /> 
-                <p>{whyGoodFit}<p>
-                <p>{whyGoodFitAnswer}<p>
+                <p>{whyGoodFit}</p>
+                <p>{whyGoodFitAnswer}</p>
             </body>
 
         </div>
