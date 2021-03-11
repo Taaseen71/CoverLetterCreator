@@ -97,8 +97,8 @@ function App() {
                 <br />
                 <br />
                     
-                <p>Why do you think you are a good fit for this company?<p>
-                <p>I work extremely well under pressure. I am primarily here to learn all that I can and apply that knowledge to my role, and help the team and the company achieve its goals. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.<p>
+                <p>"Why do you think you are a good fit for this company?"<p>
+                <p>"I work extremely well under pressure. I am primarily here to learn all that I can and apply that knowledge to my role, and help the team and the company achieve its goals. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations."<p>
             </body>
 
         </div>
