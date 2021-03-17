@@ -111,7 +111,7 @@ function App() {
                     saadat.taaseen@gmail.com<br />
                     https://www.linkedin.com/in/taaseen71/<br />
                     https://github.com/Taaseen71/<br />
-                    http://saadt.netlify.app/<br />
+                    https://saadt.netlify.app/<br />
                 </p>
                 <div className="todaysDate">
                     <p>
