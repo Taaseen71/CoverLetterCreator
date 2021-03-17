@@ -11,6 +11,10 @@ function App() {
     const [statePositionChange, setStatePositionChange] = useState("")
     const [stateCompanyChange, setStateCompanyChange] = useState("")
     const [stateExtraComments, setStateExtraComments] = useState("")
+    const [background, setBackground] = useState({
+        backgroundColor: 'white',
+        color: 'black'
+    })
 
 
     console.log(todayDate[0])
@@ -38,24 +42,48 @@ function App() {
         setStateExtraComments(event.target.value)
     }
 
+    const setBackgroundColor = () => {
+        if (background.backgroundColor === 'black') {
+            setBackground({
+                backgroundColor: 'white',
+                color: 'black'
+            })
+        }
+        else {
+            setBackground({
+                backgroundColor: 'black',
+                color: 'white'
+            })
+        }
+
+        console.log(background)
+    }
 
 
+    const paragraph1 = `I would like to express my strong interest in your open ${positionName} position with ${companyName}. I believe this is an excellent fit due to my strong knowledge and experience in Software Engineering.`
 
-    const paragraph1 = `I am writing to express my strong interest in the ${positionName} position at ${companyName}. I am a highly self-motivated Full Stack Software Engineer who exhibits strong analytical and critical thinking skills to write custom HTML, CSS and JavaScript, as well as following semantic W3C coding practices. I have experience in React-Native, React, Node, Ruby On Rails, and have worked with databases such as MongoDB, PostgreSQL and Firebase. I have experience building websites with full CRUD and authentication, and am passionate about coding. I have experience working with UX/UI designers and work well with a team, with minimal supervision. I am also well versed in mobile first and future friendly designs with an advanced knowledge of Git version control and progressive enhancement. I am a very fast learner, and have a lot of experience working with CSS, SCSS, Flexbox and Grid systems. I have used promises, Async and Await calls, and States and Props in my previous projects and feel comfortable using them in both React Hooks and Class based components. I have spent countless hours fixing bugs for both me and my colleagues' codes and have developed very strong skills to find and fix errors and provide a beautifully designed, scalable and functional website. ${extraComments}`
+    const paragraph2 = `I have experience in JavaScript, React-Native, React JS, Node JS, C# and Ruby On Rails, with which I have built scalable and functional websites with full CRUD and Authentication, and have worked with UX/UI designers to create mobile first and future friendly designs. I am a very fast learner with lots of experience working with React Hooks and Class based components. I am a problem solver at heart, and have developed very strong skills to find and fix errors to provide a beautiful user experience.  ${extraComments}
+    `
 
-    const paragraph2 = `I am a recent graduate from General Assembly as a Software Engineering Fellow. Before joining GA, I worked as a Quality Control Scientist in a pharmaceutical company and from there I gathered extensive knowledge on how to extract information through analysis and make reports with proper documentation practices that I am sure will help me in this field of work as well. I have a lot of experience working and collaborating with large groups and work particularly well under pressure. I have learnt that through patience, hard  work and a growth mindset, positive results can always be attainable.`
+    const paragraph3 = `I have strong leadership skills, and have managed teams of developers in the past to deliver projects on time. As a former Chemical Data Scientist, I have experience in confidential and critical data analysis, and work extremely well under pressure, and with a team. I believe I will transition to your company very seamlessly, and hit the ground running to deliver results very quickly.
+    `
 
-    const paragraph3 = `I recently completed an immersive Software Engineering program from General Assembly, with 480 hours of training where I honed my skills in JavaScript, HTML, React.js, Ruby on Rails, Netlify, Heroku and other packages.  During the program, I used APIs to create front-end websites using JavaScript and React, and later used back-end runtime environments and frameworks like Node.js and Ruby on Rails to create RESTful APIs that have full CRUD and server-side Authentication capabilities. My portfolio and previous projects can be viewed through this link [http://saadt.netlify.app/].`
+    const paragraph4 = `I completed an immersive Software Engineering program from General Assembly with over 500 hours of concentrated training, with which I have honed my skills as a Full-Stack Developer.  My best projects can be viewed directly through my Portfolio.
+    `
 
-    const paragraph4 = `I have a good understanding of Front-End Development using Vanilla JavaScript and React.js (both class-based Components and Hooks) and have built web-pages with responsive cross browser and device responsive development. I also have experience in Full Stack development that requires understanding of React, Node, NPM packages, Express and MongoDB databases and various operating systems like Windows, Mac OS and basic terminal based Linux environments. I am confident that my knowledge and experiences will make me an excellent candidate for the ${positionName} position at ${companyName}. Thank you for your time and consideration.`
+    const paragraph5 = `I am confident that my proven track record of excellent work ethic, unparalleled attention to detail and high performing programming skills will make me an immediate asset at ${companyName}, and allow me to contribute to the team’s success. As I plan my career to become better and a result driven programmer, I look forward to an opportunity to discuss both your biggest needs and how I may offer solutions to your team.`
 
     const whyGoodFit = `Why do you think you are a good fit for this company?`
-    
-    const whyGoodFitAnswer = `I work extremely well under pressure. I am primarily here to learn all that I can and apply that knowledge to my role, and help the team and the company achieve its goals. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.`
-    
-    
+
+    const whyGoodFitAnswer = `I work extremely well under pressure. I am primarily here to learn all that I can, and apply that knowledge to my role, and help the team and the company achieve its goals. I intend to deliver results as soon as I join the team, and immediately prove that I am an asset. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.`
+
+
     return (
-        <div className="fullPage">
+        <div
+            className="fullPage"
+            style={{ color: background.color, backgroundColor: background.backgroundColor }}
+        >
+            <button onClick={() => setBackgroundColor()}>Background Color: {background.backgroundColor}</button>
             <header className="header">
                 <form onSubmit={handleSubmit} autocomplete="off">
                     <p className="headerContents">Saadat Taaseen </p>
@@ -95,11 +123,12 @@ function App() {
                 <p>{paragraph2}</p>
                 <p>{paragraph3}</p>
                 <p>{paragraph4}</p>
+                <p>{paragraph5}</p>
                 <p>Sincerely,< br /> Saadat Taaseen</p>
                 <br />
                 <br />
                 <br />
-                <br /> 
+                <br />
                 <p>{whyGoodFit}</p>
                 <p>{whyGoodFitAnswer}</p>
             </body>
@@ -164,3 +193,16 @@ I have a good understanding of Front-End Development using Vanilla JavaScript an
                     Sincerely,
                     Saadat Taaseen
  */
+
+
+    //? Old Scrapped on March 17th 2021;
+
+    //                 const paragraph1 = `I am writing to express my strong interest in the ${positionName} position at ${companyName}. I am a highly self-motivated Full Stack Software Engineer who exhibits strong analytical and critical thinking skills to write custom HTML, CSS and JavaScript, as well as following semantic W3C coding practices. I have experience in React-Native, React, Node, Ruby On Rails, and have worked with databases such as MongoDB, PostgreSQL and Firebase. I have experience building websites with full CRUD and authentication, and am passionate about coding. I have experience working with UX/UI designers and work well with a team, with minimal supervision. I am also well versed in mobile first and future friendly designs with an advanced knowledge of Git version control and progressive enhancement. I am a very fast learner, and have a lot of experience working with CSS, SCSS, Flexbox and Grid systems. I have used promises, Async and Await calls, and States and Props in my previous projects and feel comfortable using them in both React Hooks and Class based components. I have spent countless hours fixing bugs for both me and my colleagues' codes and have developed very strong skills to find and fix errors and provide a beautifully designed, scalable and functional website. ${extraComments}`
+
+    // const paragraph2 = `I am a recent graduate from General Assembly as a Software Engineering Fellow. Before joining GA, I worked as a Quality Control Scientist in a pharmaceutical company and from there I gathered extensive knowledge on how to extract information through analysis and make reports with proper documentation practices that I am sure will help me in this field of work as well. I have a lot of experience working and collaborating with large groups and work particularly well under pressure. I have learnt that through patience, hard  work and a growth mindset, positive results can always be attainable.`
+
+    // const paragraph3 = `I recently completed an immersive Software Engineering program from General Assembly, with 480 hours of training where I honed my skills in JavaScript, HTML, React.js, Ruby on Rails, Netlify, Heroku and other packages.  During the program, I used APIs to create front-end websites using JavaScript and React, and later used back-end runtime environments and frameworks like Node.js and Ruby on Rails to create RESTful APIs that have full CRUD and server-side Authentication capabilities. My portfolio and previous projects can be viewed through this link [http://saadt.netlify.app/].`
+
+    // const paragraph4 = `I have a good understanding of Front-End Development using Vanilla JavaScript and React.js (both class-based Components and Hooks) and have built web-pages with responsive cross browser and device responsive development. I also have experience in Full Stack development that requires understanding of React, Node, NPM packages, Express and MongoDB databases and various operating systems like Windows, Mac OS and basic terminal based Linux environments. I am confident that my knowledge and experiences will make me an excellent candidate for the ${positionName} position at ${companyName}. Thank you for your time and consideration.`
+
+    //? End March 17th 2021
