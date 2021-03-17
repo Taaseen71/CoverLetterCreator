@@ -77,6 +77,9 @@ function App() {
 
     const whyGoodFitAnswer = `I work extremely well under pressure. I am primarily here to learn all that I can, and apply that knowledge to my role, and help the team and the company achieve its goals. I intend to deliver results as soon as I join the team, and immediately prove that I am an asset. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.`
 
+    const whatFreeTime = `Please list 2-3 dates and time ranges that you could do an interview.`
+    
+    const whatFreeTimeAnswer = `Weekdays, 11:00 am - 7:00 pm`
 
     return (
         <div
@@ -131,6 +134,10 @@ function App() {
                 <br />
                 <p>{whyGoodFit}</p>
                 <p>{whyGoodFitAnswer}</p>
+                <br />
+                <br />
+                <p>{whatFreeTime}</p>
+                <p>{whatFreeTimeAnswer}</p>
             </body>
 
         </div>
