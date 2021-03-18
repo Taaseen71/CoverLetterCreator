@@ -34,9 +34,11 @@ function App() {
         setCompanyName(stateCompanyChange)
         setLink(stateLinkChange)
         setExtraComments(stateExtraComments)
+        //! Clear Defaults Below
         setStatePositionChange("")
         setStateCompanyChange("")
         setStateExtraComments("")
+        setStateLinkChange("")
     }
 
     const handlePositionChange = (event) => {
