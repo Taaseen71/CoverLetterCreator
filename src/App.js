@@ -1,15 +1,20 @@
 
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import ReactDataSheet from 'react-datasheet';
+// Be sure to include styles at some point, probably during your bootstrapping
+import 'react-datasheet/lib/react-datasheet.css';
 
 function App() {
 
     const [todayDate, setTodayDate] = useState(new Date().toLocaleString().split(","))
     const [positionName, setPositionName] = useState("POSITION NAME");
-    const [companyName, setCompanyName] = useState("COMPANY NAME")
+    const [companyName, setCompanyName] = useState("COMPANY NAME");
+    const [link, setLink] = useState('')
     const [extraComments, setExtraComments] = useState("");
     const [statePositionChange, setStatePositionChange] = useState("")
     const [stateCompanyChange, setStateCompanyChange] = useState("")
+    const [stateLinkChange, setStateLinkChange] = useState("")
     const [stateExtraComments, setStateExtraComments] = useState("")
     const [background, setBackground] = useState({
         backgroundColor: 'white',
@@ -19,12 +24,15 @@ function App() {
 
     console.log(todayDate[0])
 
-
+      const grid = [
+        [{value:  positionName}, {value:  companyName}, {value: 'Link', expr: link}],
+     ]
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setPositionName(statePositionChange)
         setCompanyName(stateCompanyChange)
+        setLink(stateLinkChange)
         setExtraComments(stateExtraComments)
         setStatePositionChange("")
         setStateCompanyChange("")
@@ -36,6 +44,10 @@ function App() {
     }
     const handleCompanyChange = (event) => {
         setStateCompanyChange(event.target.value)
+    }
+
+    const handleLinkChange = (event) => {
+        setStateLinkChange(event.target.value)
     }
 
     const handleExtraCommentChange = event => {
@@ -98,16 +110,29 @@ function App() {
                         Company Name:
                         <input type="text" name="CompanyName" value={stateCompanyChange} onChange={handleCompanyChange} />
                     </label>
-
+                    <label className="headerContents">
+                        Link to Job
+                        {/* <input type="text" name={stateCompanyName} onChange={handleCompanyChange} /> */}
+                        <input type="text" name="LinkName" value={stateLinkChange} onChange={handleLinkChange} />
+                    </label>
                     <label className="headerContents">
                         Extra Comments:
                         {/* <input type="text" name={stateCompanyName} onChange={handleCompanyChange} /> */}
                         <textarea name="extraText" type="text" value={stateExtraComments} onChange={handleExtraCommentChange} id="" cols="50" rows="2"></textarea>
                     </label>
+                    
                     <input className="headerContents" type="submit" value="Submit" />
                 </form>
             </header>
             <body>
+                <div style={{display: 'flex', justifyContent: 'center', padding: '10px'}}>
+                     <ReactDataSheet
+                          data={grid}
+                          valueRenderer={(cell, i, j) => cell.value}
+                          dataRenderer={(cell, i, j) =>  cell.expr}
+                     //   onCellsChanged={onCellsChanged}
+                     />
+                </div>
                 <p>
                     New York Metropolitan Area, NY-11429<br />
                     (347) 600-4353<br />
