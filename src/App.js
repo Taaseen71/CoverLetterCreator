@@ -1,7 +1,6 @@
 
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import ReactDataSheet from 'react-datasheet';
+import React, { useState, } from 'react';
 // Be sure to include styles at some point, probably during your bootstrapping
 import 'react-datasheet/lib/react-datasheet.css';
 // import { CopyToClipboard } from 'react-copy-to-clipboard';

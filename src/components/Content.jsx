@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import MailForInterviewRequest from './MailForInterviewRequest'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, todayDate }) {
   return (
-    <div>
+    <div className="content">
       <p>
         New York Metropolitan Area, NY-11429<br />
                     (347) 600-4353<br />
@@ -36,7 +36,6 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
     copied: false
   })
 
-  // const textAreaRef = useRef(null)
 
   const paragraph1 = `I would like to express my strong interest in your open ${positionName} position with ${companyName}. I believe I would make an excellent fit for the position due to my strong knowledge and experience in Software Engineering.`
 
@@ -59,20 +58,44 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
   const whatFreeTimeAnswer = `Weekdays, 11:00 am - 7:00 pm`
 
+  const cover = `
+New York Metropolitan Area, NY-11429
+(347) 600-4353
+saadat.taaseen@gmail.com
+https://www.linkedin.com/in/taaseen71/
+https://github.com/Taaseen71/
+https://saadt.netlify.app/
+  
+${todayDate[0]}
+  
+Dear Hiring Manager,
+${paragraph1}
+
+${paragraph2}
+${paragraph3}
+${paragraph4}
+${paragraph5}
+  
+Sincerely,
+Saadat Taaseen
+            `
+
+
   return (
     <div>
       <h2>Cover Letter</h2>
       <div>
         <CoverLetter positionName={positionName} companyName={companyName} extraComments={extraComments} todayDate={todayDate} paragraph1={paragraph1} paragraph2={paragraph2} paragraph3={paragraph3} paragraph4={paragraph4} paragraph5={paragraph5} />
 
-        {/* <CopyToClipboard
+        <CopyToClipboard
           options={{ format: "text/plain" }}
           // text={`${positionName}	${companyName}	${link}`}
-          text={CoverLetter}
+          text={cover}
+
           onCopy={() => setCoverLetterClipboard({ ...coverLetterClipboard, copied: true })}
         >
-          <button>Copy Cover</button>
-        </CopyToClipboard> */}
+          <button>Copy Cover Letter</button>
+        </CopyToClipboard>
 
 
 
