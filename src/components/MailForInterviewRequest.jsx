@@ -8,6 +8,11 @@ function MailForInterviewRequest({ positionName, companyName }) {
 
   const para3 = "I’ve attached my cover letter and resume for your review. I hope you’ll contact me at your convenience to discuss the program and to arrange an interview. Thank you for your time."
 
+  const mailBackForRecruiters = `
+Thanks for reaching out. I would love to be considered for this position. I have attached my resume to this email for your reference. Please reach out to me if you have any questions. 
+Best Regards,
+Saadat Taaseen
+`
   return (
     <div>
       <br />
@@ -26,6 +31,11 @@ function MailForInterviewRequest({ positionName, companyName }) {
       <p>Email: saadat.taaseen@gmail.com <br />
       Phone: (347) 600-4353
       </p>
+      <br />
+      <p>
+        {mailBackForRecruiters}
+      </p>
+      <br />
     </div>
   )
 }
