@@ -26,6 +26,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
   return (
     <div>
+      <h2>Cover Letter</h2>
       <p>
         New York Metropolitan Area, NY-11429<br />
                     (347) 600-4353<br />
