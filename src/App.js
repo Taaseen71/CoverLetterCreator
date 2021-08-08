@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useState, } from 'react';
+import React, { useState, useEffect } from 'react';
 // Be sure to include styles at some point, probably during your bootstrapping
 import 'react-datasheet/lib/react-datasheet.css';
 // import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -24,13 +24,25 @@ function App() {
   const [stateExtraComments, setStateExtraComments] = useState("")
   const [background, setBackground] = useState({
     backgroundColor: 'white',
-    color: 'black'
+    color: 'black',
+    darkMode: 'off'
   })
 
   const [copiedToClipboard, setCopiedToClipboard] = useState({
     value: '',
     copied: false,
   });
+
+  useEffect(() => {
+    const darkMode = localStorage.getItem('darkMode')
+    if (!darkMode) {
+      alert('This website saves a variable to localStorage to decide weather to provide you with dark mode or light mode. You wont recieve this message again.')
+      localStorage.setItem('darkMode', JSON.stringify(background))
+    }
+    else {
+      setBackground(JSON.parse(darkMode))
+    }
+  }, [])
 
   console.log("today's Date: " + todayDate[0])
 
@@ -67,17 +79,24 @@ function App() {
   }
 
   const setBackgroundColor = () => {
-    if (background.backgroundColor === 'black') {
-      setBackground({
+    let changedBackground;
+    if (background.darkMode === 'on') {
+      changedBackground = {
         backgroundColor: 'white',
-        color: 'black'
-      })
+        color: 'black',
+        darkMode: 'off'
+      }
+      localStorage.setItem('darkMode', JSON.stringify(changedBackground))
+      setBackground(changedBackground)
     }
     else {
-      setBackground({
-        backgroundColor: 'black',
-        color: 'white'
-      })
+      changedBackground = {
+        backgroundColor: '#1f1b1b',
+        color: 'white',
+        darkMode: 'on'
+      }
+      localStorage.setItem('darkMode', JSON.stringify(changedBackground))
+      setBackground(changedBackground)
     }
 
     console.log(background)
@@ -89,26 +108,26 @@ function App() {
       className="fullPage"
       style={{ color: background.color, backgroundColor: background.backgroundColor }}
     >
-      <button onClick={() => setBackgroundColor()}>Background Color: {background.backgroundColor}</button>
+      <button onClick={() => setBackgroundColor()}>DarkMode: {background.darkMode}</button>
       <header className="header">
         <form onSubmit={handleSubmit} autoComplete="off">
           <p className="headerContents">Saadat Taaseen </p>
           <label className="headerContents">
             Position Name:
-                        <input type="text" name="PositionName" value={statePositionChange} onChange={handlePositionChange} />
+            <input type="text" name="PositionName" value={statePositionChange} onChange={handlePositionChange} />
           </label>
           <label className="headerContents">
             Company Name:
-                        <input type="text" name="CompanyName" value={stateCompanyChange} onChange={handleCompanyChange} />
+            <input type="text" name="CompanyName" value={stateCompanyChange} onChange={handleCompanyChange} />
           </label>
           <label className="headerContents">
             Link to Job
-                        {/* <input type="text" name={stateCompanyName} onChange={handleCompanyChange} /> */}
+            {/* <input type="text" name={stateCompanyName} onChange={handleCompanyChange} /> */}
             <input type="text" name="LinkName" value={stateLinkChange} onChange={handleLinkChange} />
           </label>
           <label className="headerContents">
             Extra Comments:
-                        {/* <input type="text" name={stateCompanyName} onChange={handleCompanyChange} /> */}
+            {/* <input type="text" name={stateCompanyName} onChange={handleCompanyChange} /> */}
             <textarea name="extraText" type="text" value={stateExtraComments} onChange={handleExtraCommentChange} id="" cols="50" rows="2"></textarea>
           </label>
 
