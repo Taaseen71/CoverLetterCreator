@@ -8,7 +8,7 @@ function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph
       <p>
         
         New York Metropolitan Area, NY-10010<br />
-        (347) 600-4353<br />
+        +1 (540) 753-1951<br />
         dev.saadat@gmail.com<br />
         https://www.linkedin.com/in/taaseen71/<br />
         https://github.com/Taaseen71/<br />
@@ -69,7 +69,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
   const cover = `
 New York Metropolitan Area, NY-10010
-(347) 600-4353
++1 (540) 753-1951
 dev.saadat@gmail.com
 https://www.linkedin.com/in/taaseen71/
 https://github.com/Taaseen71/
