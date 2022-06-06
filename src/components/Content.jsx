@@ -42,15 +42,15 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
 
 
-  const paragraph2 = `In my position as a Software Developer for my current company, Tred Earth LTD, I have led, managed, and overseen projects as well as performed in designing and developing the website myself. I have very strong leadership skills, and I am adaptive to any kind of environment or tasks that I do. I have experience shipping and deploying codebases on different hosting platforms and have worked directly with founders to deliver exactly what is required from me. I have exceeded multiple expectations from my current team, and want to be able to use my experiences to help reach all the goals that ${companyName} has. Currently I am working to develop a mobile version of the website I built for Android development purposes using React-Native.`
+  const paragraph2 = `In my position as a Software Developer for my previous company, I have led, managed, and overseen projects as well as performed in designing and developing the website myself. I have worked with other developers, and clients to deliver accurate designs and dynamic webpages. I have very strong leadership skills, and I am adaptive to any kind of environment or tasks. I have experience shipping and deploying codebases, such as JavaScript, Vue w/ TypeScript, React, Node JS, Ruby on Rails, and Wordpress, and have worked directly with founders, to deliver working websites. I have exceeded multiple expectations from my current team, and want to be able to use my experiences to help reach all the goals that ${companyName} has. I am always looking to grow as an Engineer and looking forward to learn new languages and use my skillsets to benefit my peers.`
 
 
 
-  const paragraph3 = `I have extensive practice and experience working within an Agile Team environment, and have worked with HTML, CSS, JavaScript and multiple frameworks, including Node.JS, React, Ruby on Rails, and React-Native etc. I have a really good concept of CORS, and web browsing security, as well as handling RESTful API requests using Express or Node.JS framework. ${extraComments}`
+  const paragraph3 = `I have extensive practice and experience working within an Agile Team environment, and have worked with HTML, CSS, JavaScript and have worked with both relational and non-relational databases, such as MongoDB, MySQL, Firebase etc. I have a really good concept of CORS, and web browsing security, as well as handling RESTful API requests using the Node Express framework. ${extraComments}`
 
 
 
-  const paragraph4 = ` I have a proven track record of working in a dynamic environment with the ability to manage multiple projects, and work with tight deadlines. I have worked closely with the founders of my current company and have provided elaborate insights to the development process to help them assess situations and make important decisions for the company. My hard work, along with my peers at Tred’s marketing and UX/UI teams have helped raise over £1 million in investments from over 1000 investors for the company.  From my previous employments, I also have gained a lot of experience understanding the sales cycles and strategies that allow a company to excel in reaching their target demographics. `
+  const paragraph4 = ` I have a proven track record of working in a dynamic environment with the ability to manage multiple projects, and work with tight deadlines. I have worked closely with the founders of my current company and have provided elaborate insights to the development process to help them assess situations and make important decisions for the company.`
 
 
 
@@ -67,9 +67,9 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
   const whatFreeTimeAnswer = `Weekdays, 11:00 am - 7:00 pm`
 
   const cover = `
-New York Metropolitan Area, NY-11429
+New York Metropolitan Area, NY-10010
 (347) 600-4353
-saadat.taaseen@gmail.com
+dev.saadat@gmail.com
 https://www.linkedin.com/in/taaseen71/
 https://github.com/Taaseen71/
 https://saadt.netlify.app/
