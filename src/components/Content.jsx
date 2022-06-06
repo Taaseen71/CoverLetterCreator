@@ -47,7 +47,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
 
 
-  const paragraph3 = `I have extensive practice and experience working within an agile Team environment, and have worked with both relational and non-relational databases, such as MongoDB, MySQL, Firebase etc. I have a really good concept of CORS, and web browsing security, as well as handling RESTful API requests using the Node-Express framework. ${extraComments}`
+  const paragraph3 = `I have extensive practice and experience working within an agile team environment, and have worked with both relational and non-relational databases, such as MongoDB, MySQL, Firebase etc. I have a really good concept of CORS, and web browsing security, as well as handling RESTful API requests using the Node-Express framework. ${extraComments}`
 
 
 
