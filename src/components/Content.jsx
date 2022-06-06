@@ -6,9 +6,10 @@ function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph
   return (
     <div className="content">
       <p>
-        New York Metropolitan Area, NY-11429<br />
+        
+        New York Metropolitan Area, NY-10010<br />
         (347) 600-4353<br />
-        saadat.taaseen@gmail.com<br />
+        dev.saadat@gmail.com<br />
         https://www.linkedin.com/in/taaseen71/<br />
         https://github.com/Taaseen71/<br />
         https://saadt.netlify.app/<br />
@@ -38,15 +39,15 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
   })
 
 
-  const paragraph1 = `I would like to express my strong interest in your open ${positionName} position with ${companyName}. Your description of the work responsibilities for the role very closely matches my experiences, and I am excited to submit my resume to you for your consideration.`
+  const paragraph1 = `I would like to express my strong interest in your open ${positionName} position with ${companyName}. Your description of the work responsibilities for the role very closely match my experiences, and I am excited to submit my resume to you for your consideration.`
 
 
 
-  const paragraph2 = `In my position as a Software Developer for my previous company, I have led, managed, and overseen projects as well as performed in designing and developing the website myself. I have worked with other developers, and clients to deliver accurate designs and dynamic webpages. I have very strong leadership skills, and I am adaptive to any kind of environment or tasks. I have experience shipping and deploying codebases, such as JavaScript, Vue w/ TypeScript, React, Node JS, Ruby on Rails, and Wordpress, and have worked directly with founders, to deliver working websites. I have exceeded multiple expectations from my current team, and want to be able to use my experiences to help reach all the goals that ${companyName} has. I am always looking to grow as an Engineer and looking forward to learn new languages and use my skillsets to benefit my peers.`
+  const paragraph2 = `In my position as a Software Developer for my previous company, I have led, managed, and overseen projects as well as created  web pages, with RESTful APIs and authentication, and improved web security and code-structures. I have worked by myself, and with other developers, and clients to deliver accurate designs and dynamic webpages. I have very strong leadership skills, and I am adaptive to any kind of environment or tasks. I have experience shipping and deploying codebases, such as JavaScript, Vue w/ TypeScript, React, Node JS, Ruby on Rails, and Wordpress, and have worked directly with founders, to deliver working websites. I have exceeded multiple expectations from my current team, and want to be able to use my experiences to help reach all the goals that ${companyName} has. I am always looking to grow as an Engineer and looking forward to learn new languages and use my skillsets to benefit my peers.`
 
 
 
-  const paragraph3 = `I have extensive practice and experience working within an Agile Team environment, and have worked with HTML, CSS, JavaScript and have worked with both relational and non-relational databases, such as MongoDB, MySQL, Firebase etc. I have a really good concept of CORS, and web browsing security, as well as handling RESTful API requests using the Node Express framework. ${extraComments}`
+  const paragraph3 = `I have extensive practice and experience working within an Agile Team environment, and have worked with both relational and non-relational databases, such as MongoDB, MySQL, Firebase etc. I have a really good concept of CORS, and web browsing security, as well as handling RESTful API requests using the Node-Express framework. ${extraComments}`
 
 
 
@@ -54,7 +55,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
 
 
-  const paragraph5 = ` I am confident that my proven track record of excellent work ethic, unparalleled attention to detail and high performing programming skills will make me an exceptional candidate for this role, and allow me to contribute to the team's success. I am excited to meet your team and work with them to the fullest of my abilities. As I plan my career to become better and a result driven programmer, I look forward to an opportunity to discuss both your biggest needs and how I may offer solutions to your team. If I can provide you with any further information on my background and qualifications, please let me know.`
+  const paragraph5 = ` I am confident that my proven track record of excellent work ethic, unparalleled attention to detail and high performing programming skills will make me an exceptional candidate for this role, and allow me to contribute to the team's success. I have endorsements from my previous employers and colleagues who vouch for my engineering skills and my ability to adapt to any situation. I am excited to meet your team and work with them to the fullest of my abilities. As I plan my career to become a better engineer, I look forward to an opportunity to discuss both your biggest needs and how I may offer solutions to your team. If I can provide you with any further information on my background and qualifications, please let me know.`
 
   const paragraph6 = `I look forward to hearing from y​​ou. Thank you​​​​​ so much​ ​​​for your consideration.`
 
@@ -141,14 +142,3 @@ Saadat Taaseen
 export default Content
 
 
-// const paragraph2h = `I have experience in JavaScript, React-Native, React JS, Node JS, C# and Ruby On Rails, with which I have built scalable and functional websites with full CRUD and Authentication, and have worked with UX/UI designers to create mobile first and future friendly designs. I am a very fast learner with lots of experience working with React Hooks and Class based components. I am a problem solver at heart, and have developed very strong skills to find and fix errors to provide a beautiful user experience.  ${extraComments}
-// `
-
-// const paragraph4h = `I completed an immersive Software Engineering program from General Assembly with over 500 hours of concentrated training, with which I have honed my skills as a Full-Stack Developer.  My best projects can be viewed directly through my Portfolio.
-//   `
-
-
-//   const paragraph3h = `I have previous experience in managing projects and have made important decisions to help navigate my team to reach its goals.  As a former Chemical Data Scientist, I have experience in reliably working with confidential and critical data, and work extremely well under pressure, with a team and individually. I believe I will transition to your company very seamlessly, and hit the ground running to deliver results very quickly.
-//   `
-
-//   const paragraph5h = `I am confident that my proven track record of excellent work ethic, unparalleled attention to detail and high performing programming skills will make me an immediate asset at ${companyName}, and allow me to contribute to the team’s success. As I plan my career to become better and a result driven programmer, I look forward to an opportunity to discuss both your biggest needs and how I may offer solutions to your team.`
