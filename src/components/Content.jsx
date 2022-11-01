@@ -118,26 +118,27 @@ function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph
   return (
     <div className="content">
       <p>
-        
-        New York Metropolitan Area, NY-10010<br />
-        +1 (540) 753-1951<br />
-        dev.saadat@gmail.com<br />
-        https://www.linkedin.com/in/taaseen71/<br />
-        https://github.com/Taaseen71/<br />
-        https://saadt.netlify.app/<br />
+{`New York Metropolitan Area, NY-10010\n
++1 (540) 753-195\n
+dev.saadat@gmail.com\n
+https://www.linkedin.com/in/taaseen71/\n
+https://github.com/Taaseen71/\n
+https://saadt.netlify.app/`\n}
       </p>
       <div className="todaysDate">
         <p>
           {todayDate[0]}
         </p>
       </div>
-      <p>Dear Hiring Manager,<br /></p>
-      <p>{paragraph1}</p>
-      <p>{paragraph2}</p>
-      <p>{paragraph3}</p>
-      <p>{paragraph4}</p>
-      <p>{paragraph5}</p>
-      <p>{paragraph6}</p>
+<p>Dear Hiring Manager,<br /></p>
+      <p>
+{paragraph1}<br/>
+{paragraph2}<br/>
+{paragraph3}<br/>
+{paragraph4}<br/>
+{paragraph5}<br/>
+{paragraph6}
+      </p>
       <p>Sincerely,< br /> Saadat Taaseen</p>
     </div>
   )
