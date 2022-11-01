@@ -123,7 +123,7 @@ function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph
 dev.saadat@gmail.com\n
 https://www.linkedin.com/in/taaseen71/\n
 https://github.com/Taaseen71/\n
-https://saadt.netlify.app/`\n}
+https://saadt.netlify.app/\n`}
       </p>
       <div className="todaysDate">
         <p>
