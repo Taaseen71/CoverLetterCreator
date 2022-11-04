@@ -44,25 +44,18 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
   const whatFreeTime = `Please list 2-3 dates and time ranges that you could do an interview.`
 
-
+  //? THIS COPIES THE BUTTON
   const cover = (`
-  New York Metropolitan Area, NY-10010
-  +1 (540) 753-1951
-  dev.saadat@gmail.com
-  https://www.linkedin.com/in/taaseen71/
-  https://github.com/Taaseen71/
-  https://saadt.netlify.app/
-  ${todayDate[0]}\n
-  Dear Hiring Manager,
-  ${paragraph1}\n
-  ${paragraph2}\n
-  ${paragraph3}\n
-  ${paragraph4}\n
-  ${paragraph5}\n
-  ${paragraph6}\n
-  Sincerely,\n
-  Saadat Taaseen\n
-            `)
+  \nNew York Metropolitan Area, NY-10010 \n+1 (540) 753-1951 \ndev.saadat@gmail.com \nhttps://www.linkedin.com/in/taaseen71/ \nhttps://github.com/Taaseen71/ \nhttps://saadt.netlify.app/
+  \n${todayDate[0]}
+  \nDear Hiring Manager,
+  \n${paragraph1}
+  \n${paragraph2}
+  \n${paragraph3}
+  \n${paragraph4}
+  \n${paragraph5}
+  \n${paragraph6}
+  \nSincerely,\nSaadat Taaseen`)
 
 
   return (
@@ -116,31 +109,28 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
 function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, todayDate }) {
   return (
-    <div className="content">
-      <p>
-{`New York Metropolitan Area, NY-10010\n
-+1 (540) 753-195\n
-dev.saadat@gmail.com\n
-https://www.linkedin.com/in/taaseen71/\n
-https://github.com/Taaseen71/\n
-https://saadt.netlify.app/\n`}
-      </p>
-      <div className="todaysDate">
-        <p>
-          {todayDate[0]}
-        </p>
-      </div>
+<div className="content">
+<p><br/>
+{`New York Metropolitan Area, NY-10010`}<br/>
+{`+1 (540) 753-195`}<br/>
+{`dev.saadat@gmail.com`}<br/>
+{`https://www.linkedin.com/in/taaseen71/`}<br/>
+{`https://github.com/Taaseen71/`}<br/>
+{`https://saadt.netlify.app/`}<br/>
+</p>
+<p  className="todaysDate">{todayDate[0]}</p>
 <p>Dear Hiring Manager,<br /></p>
-      <p>
+<p>
 {paragraph1}<br/>
 {paragraph2}<br/>
 {paragraph3}<br/>
 {paragraph4}<br/>
 {paragraph5}<br/>
 {paragraph6}
-      </p>
-      <p>Sincerely,< br /> Saadat Taaseen</p>
-    </div>
+</p>
+<p>Sincerely,< br /> 
+Saadat Taaseen</p>
+</div>
   )
 }
 
