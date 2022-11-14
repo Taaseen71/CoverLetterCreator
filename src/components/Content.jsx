@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MailForInterviewRequest from './MailForInterviewRequest'
 // import { useStateIfMounted } from "use-state-if-mounted";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import CopyCoverLetter from './CopyCoverLetter';
 import axios from "axios";
 import {Button, Typography} from '@mui/material';
 
@@ -48,17 +49,28 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
   const whatFreeTime = `Please list 2-3 dates and time ranges that you could do an interview.`
 
   //? THIS COPIES THE BUTTON
-  const cover = (`
-  \nNew York Metropolitan Area, NY-10010 \n+1 (540) 753-1951 \ndev.saadat@gmail.com \nhttps://www.linkedin.com/in/taaseen71/ \nhttps://github.com/Taaseen71/ \nhttps://saadt.netlify.app/
-  \n${todayDate[0]}
-  \nDear Hiring Manager,
-  \n${paragraph1}
-  \n${paragraph2}
-  \n${paragraph3}
-  \n${paragraph4}
-  \n${paragraph5}
-  \n${paragraph6}
-  \nSincerely,\nSaadat Taaseen`)
+//   const cover = (
+// `New York Metropolitan Area, 
+// NY-10010
+// +1 (540) 753-1951
+// dev.saadat@gmail.com
+// https://www.linkedin.com/in/taaseen71/
+// https://github.com/Taaseen71/
+// https://saadt.netlify.app/
+
+// ${todayDate[0]}
+
+// Dear Hiring Manager,
+// ${paragraph1}
+// ${paragraph2}
+// ${paragraph3}
+// ${paragraph4}
+// ${paragraph5}
+// ${paragraph6}
+
+// Sincerely,
+// Saadat Taaseen`
+// )
 
 
   return (
@@ -80,7 +92,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
         <CopyToClipboard
           options={{ format: "text/plain" }}
-          text={cover}
+          text={CopyCoverLetter(todayDate, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6)}
           onCopy={() => setCoverLetterClipboard({ ...coverLetterClipboard, copied: true })}
         >
           <Button variant="contained">Copy Cover Letter</Button>
@@ -88,18 +100,14 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
 
       </div> 
       
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
-
-      <div>  
+      <div style={{paddingTop: '100px'}}>  
         <h2> Why are you Interesting?</h2>
         <p>{whyGoodFit}</p>
         <p>{whyGoodFitAnswer}</p>
         
       </div> 
       
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
-      
-      <div>  
+      <div style={{paddingTop: '100px'}}>  
         <h2>Availability</h2>
         <p>{whatFreeTime}</p>
         <p>{whatFreeTimeAnswer}</p>
@@ -121,16 +129,16 @@ function CoverLetter({ paragraph1, paragraph2, paragraph3, paragraph4, paragraph
 {`https://github.com/Taaseen71/`}<br/>
 {`https://saadt.netlify.app/`}<br/>
 </Typography>
-<Typography variant="body1" gutterBottom  className="todaysDate">{todayDate[0]}</Typography>
+<Typography variant="body1" gutterBottom  className="todaysDate">{todayDate[0]}</Typography><br/>
 <Typography variant="body1" gutterBottom>Dear Hiring Manager,<br /></Typography>
 <Typography variant="body1" gutterBottom>
-{paragraph1}<br/>
-{paragraph2}<br/>
-{paragraph3}<br/>
-{paragraph4}<br/>
-{paragraph5}<br/>
+{paragraph1}<br/><br/>
+{paragraph2}<br/><br/>
+{paragraph3}<br/><br/>
+{paragraph4}<br/><br/>
+{paragraph5}<br/><br/>
 {paragraph6}
-</Typography>
+</Typography>< br />
 <Typography variant="body1" gutterBottom>Sincerely,< br /> 
 Saadat Taaseen</Typography>
 </div>
