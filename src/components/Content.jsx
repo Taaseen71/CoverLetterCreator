@@ -79,7 +79,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
           <Button variant="contained">Copy Cover Letter</Button>
         </CopyToClipboard>
         <br />
-        <CreatePDF  
+        <CreatePDF
           positionName={positionName}
           companyName={companyName}
           extraComments={extraComments}
