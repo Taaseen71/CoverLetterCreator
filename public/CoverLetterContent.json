@@ -1,5 +1,5 @@
 {
-    "CoverLetterContent": {
+    "coverLetterContent": {
         "paragraph1": "Your description of the work responsibilities for the role very closely matches my experiences, and I am excited to submit my resume to you for your consideration. ",
 
         "paragraph2": "In my position as a Software Developer for my previous company, I have led, managed, and overseen projects as well as created web pages, with RESTful APIs and authentication, and improved web security and code structures. I have worked by myself, and with other developers, and clients to deliver accurate designs and dynamic web pages. I have very strong leadership skills, and I am adaptive to any kind of environment or task. I have experience shipping and deploying codebases, such as JavaScript, Vue w/ TypeScript, React, Node JS, Ruby on Rails, and WordPress, and have worked directly with founders, to deliver working websites. ",
@@ -14,5 +14,18 @@
     "misc": {
         "whyGoodFitAnswer": "I work extremely well under pressure. I am primarily here to learn all that I can, and apply that knowledge to my role, and help the team and the company achieve its goals. I intend to deliver results as soon as I join the team, and immediately prove that I am an asset. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.",
         "whatFreeTimeAnswer": "Weekdays, 11:00 am - 7:00 pm"
+    },
+    "information": {
+        "address": "New York Metropolitan Area",
+        "stateAndZip": "NY-10010",
+        "phoneNumber": "+1 (540) 753-1951",
+        "altPhoneNumber": "+1 (347) 600-4353",
+        "email": "dev.saadat@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/taaseen71/",
+        "github": "https://github.com/Taaseen71/",
+        "portfolio": "https://saadt.netlify.app/",
+        "intro": "Dear Hiring Manager",
+        "outro": "Sincerely",
+        "name": "Saadat Taaseen"
     }
 }
