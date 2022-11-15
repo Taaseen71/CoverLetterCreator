@@ -14,7 +14,7 @@ Font.register({
         {
             src: robotoBold,
             fontWeight:"bold"
-        }
+        },
     ]
   })
       // Create styles
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
         margin: 10,
         padding: '20 45',
         fontSize: 10,
-        fontFamily: 'roboto'
-    //   fontFamily:'Times-Roman'
+        // fontFamily: 'roboto'
+        fontFamily:'Times-Roman',
     },
     viewer: {
         display: 'flex',
@@ -52,15 +52,18 @@ const styles = StyleSheet.create({
     },
     header1: {
         fontSize: 12,
+        fontFamily: "Times-Bold",
         fontWeight:  800,
         textTransform: "uppercase",
         paddingBottom: 3
     },
     header2: {
         fontSize: 11,
+        fontFamily: "Times-Bold",
         fontWeight: "bold",
     },
     bold: {
+        fontFamily: "Times-Bold",
         fontWeight: "bold"
     },
     underline: {

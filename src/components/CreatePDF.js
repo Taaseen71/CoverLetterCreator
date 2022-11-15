@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 45,
     fontSize: 11,
-    fontFamily:"roboto"
-    // fontFamily:'Times-Roman'
+    // fontFamily:"roboto"
+    fontFamily:'Times-Roman'
   },
   viewer: {
     display: 'flex',
