@@ -1,6 +1,6 @@
-function CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber) {
+function CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber, usePrimaryAddress) {
   const cover = information && (
-  `${information.address}, ${information.stateAndZip}
+  `${usePrimaryAddress ? information.altAddress + ", " + information.altStateAndZip : information.address + ", " + information.stateAndZip}
 ${usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}
 ${information.email}
 ${information.linkedin}

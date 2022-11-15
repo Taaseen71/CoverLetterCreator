@@ -20,6 +20,7 @@ const Body = ({setBackgroundColor, background}) => {
     const [extraComments, setExtraComments] = useState("");
 
     const [usePhoneNumber, setUsePhoneNumber] = useState(1)
+    const [usePrimaryAddress, setUsePrimaryAddress] = useState(1)
 
     const [copiedToClipboard, setCopiedToClipboard] = useState({
         value: '',
@@ -136,33 +137,41 @@ const Body = ({setBackgroundColor, background}) => {
                     <Grid container spacing={2}>
                         <Grid xs={12} style={{display: 'flex', justifyContent: 'center'}}>
                             <ToggleButtonGroup
-                                color="secondary"
-                                value={usePhoneNumber}
+                                color="primary"
+                                value={usePrimaryAddress}
                                 size="small"
                                 exclusive
-                                onChange={(e, newValue) => {setUsePhoneNumber(newValue)}}
+                                onChange={(e, newValue) => {
+                                    if(newValue !==null){
+                                        setUsePrimaryAddress(newValue)
+                                    }
+                                }}
                                 aria-label="Use Phone Number"
                             >
-                                <ToggleButton value={0}>Use Personal Phone Number</ToggleButton>
-                                <ToggleButton value={1}>Use Alternate Phone Number</ToggleButton>
+                                <ToggleButton value={1}>Use Alternate Address</ToggleButton>
+                                <ToggleButton value={0}>Use Personal Address</ToggleButton>
                             </ToggleButtonGroup>
                         </Grid>
                     </Grid>
-                    {/* <Grid container spacing={2}>
+                    <Grid container spacing={2}>
                         <Grid xs={12} style={{display: 'flex', justifyContent: 'center'}}>
                             <ToggleButtonGroup
                                 color="secondary"
                                 value={usePhoneNumber}
                                 size="small"
                                 exclusive
-                                onChange={(e, newValue) => {setUsePhoneNumber(newValue)}}
+                                onChange={(e, newValue) => {
+                                    if (newValue !==null){
+                                        setUsePhoneNumber(newValue)
+                                    }
+                                }}
                                 aria-label="Use Phone Number"
                             >
-                                <ToggleButton value={0}>Use Personal Phone Number</ToggleButton>
                                 <ToggleButton value={1}>Use Alternate Phone Number</ToggleButton>
+                                <ToggleButton value={0}>Use Personal Phone Number</ToggleButton>
                             </ToggleButtonGroup>
                         </Grid>
-                    </Grid> */}
+                    </Grid>
                 </form>
             </header>
         </div>
@@ -174,7 +183,7 @@ const Body = ({setBackgroundColor, background}) => {
             <CopyToClip setCopiedToClipboard={setCopiedToClipboard} copiedToClipboard={copiedToClipboard} positionName={positionName} companyName={companyName} link={link} grid={grid} />
           </div>
           {/* //* Cover Letter and Interview Prompt */}
-          <Content positionName={positionName} companyName={companyName} extraComments={extraComments} todayDate={todayDate} usePhoneNumber={usePhoneNumber} />
+          <Content positionName={positionName} companyName={companyName} extraComments={extraComments} todayDate={todayDate} usePhoneNumber={usePhoneNumber} usePrimaryAddress={usePrimaryAddress}/>
         </div>
     </div>
   )

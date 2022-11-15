@@ -16,8 +16,10 @@
         "whatFreeTimeAnswer": "Weekdays, 11:00 am - 7:00 pm"
     },
     "information": {
-        "address": "New York Metropolitan Area",
-        "stateAndZip": "NY-10010",
+        "address": "Queens, New York",
+        "altAddress": "New York Metropolitan Area",
+        "stateAndZip": "NY-11429",
+        "altStateAndZip": "NY-10010",
         "phoneNumber": "+1 (347) 600-4353",
         "altPhoneNumber": "+1 (540) 753-1951",
         "email": "dev.saadat@gmail.com",

@@ -8,7 +8,7 @@ import axios from "axios";
 import {Button, Typography} from '@mui/material';
 
 
-function Content({ positionName, companyName, extraComments, todayDate, usePhoneNumber }) {
+function Content({ positionName, companyName, extraComments, todayDate, usePhoneNumber, usePrimaryAddress }) {
   const [paragraph1, setParagraph1] = useState("")
   const [paragraph2, setParagraph2] = useState("")
   const [paragraph3, setParagraph3] = useState("")
@@ -57,6 +57,7 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
           extraComments={extraComments}
           todayDate={todayDate}
           usePhoneNumber={usePhoneNumber}
+          usePrimaryAddress={usePrimaryAddress}
           paragraph1={paragraph1}
           paragraph2={paragraph2}
           paragraph3={paragraph3}
@@ -69,7 +70,7 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
         <CopyToClipboard
           style={{marginBottom: 50}} 
           options={{ format: "text/plain" }}
-          text={CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber)}
+          text={CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber, usePrimaryAddress)}
           onCopy={() => setCoverLetterClipboard({ ...coverLetterClipboard, copied: true })}
         >
           <Button variant="contained">Copy Cover Letter</Button>
@@ -81,6 +82,7 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
           extraComments={extraComments}
           todayDate={todayDate}
           usePhoneNumber={usePhoneNumber}
+          usePrimaryAddress={usePrimaryAddress}
           paragraph1={paragraph1}
           paragraph2={paragraph2}
           paragraph3={paragraph3}
@@ -109,13 +111,12 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
   )
 }
 
-function CoverLetter({ information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, todayDate, usePhoneNumber }) {
+function CoverLetter({ information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, todayDate, usePhoneNumber, usePrimaryAddress }) {
   return (
 <div className="content">
 <Typography variant="body1" gutterBottom><br/>
-{information.address}, {information.stateAndZip}<br/>
+{usePrimaryAddress ? `${information.altAddress}, ${information.altStateAndZip}` : `${information.address}, ${information.stateAndZip}`}<br/>
 {usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}<br/>
-{/* {information.altPhoneNumber}<br/> */}
 {information.email}<br/>
 {information.linkedin}<br/>
 {information.github}<br/>
