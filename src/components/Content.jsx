@@ -8,7 +8,7 @@ import axios from "axios";
 import {Button, Typography} from '@mui/material';
 
 
-function Content({ positionName, companyName, extraComments, todayDate }) {
+function Content({ positionName, companyName, extraComments, todayDate, usePhoneNumber }) {
   const [paragraph1, setParagraph1] = useState("")
   const [paragraph2, setParagraph2] = useState("")
   const [paragraph3, setParagraph3] = useState("")
@@ -18,7 +18,11 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
   const [information, setInformation] = useState("")
   const [whatFreeTimeAnswer, setWhatFreeTimeAnswer] = useState("")
   const [whyGoodFitAnswer, setWhyGoodFitAnswer] = useState("")
-  
+
+  const [coverLetterClipboard, setCoverLetterClipboard] = useState({
+    value: "",
+    copied: false
+  })
 
   useEffect(() => {   
     GetFile()
@@ -42,15 +46,6 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
   
 
 
-  const [coverLetterClipboard, setCoverLetterClipboard] = useState({
-    value: "",
-    copied: false
-  })
-
-  const whyGoodFit = `Why do you think you are a good fit for this company?`
-
-  const whatFreeTime = `Please list 2-3 dates and time ranges that you could do an interview.`
-
 
   return (
     <div>
@@ -61,6 +56,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
           companyName={companyName}
           extraComments={extraComments}
           todayDate={todayDate}
+          usePhoneNumber={usePhoneNumber}
           paragraph1={paragraph1}
           paragraph2={paragraph2}
           paragraph3={paragraph3}
@@ -73,7 +69,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
         <CopyToClipboard
           style={{marginBottom: 50}} 
           options={{ format: "text/plain" }}
-          text={CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6)}
+          text={CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber)}
           onCopy={() => setCoverLetterClipboard({ ...coverLetterClipboard, copied: true })}
         >
           <Button variant="contained">Copy Cover Letter</Button>
@@ -84,6 +80,7 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
           companyName={companyName}
           extraComments={extraComments}
           todayDate={todayDate}
+          usePhoneNumber={usePhoneNumber}
           paragraph1={paragraph1}
           paragraph2={paragraph2}
           paragraph3={paragraph3}
@@ -112,12 +109,13 @@ function Content({ positionName, companyName, extraComments, todayDate }) {
   )
 }
 
-function CoverLetter({ information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, todayDate }) {
+function CoverLetter({ information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, todayDate, usePhoneNumber }) {
   return (
 <div className="content">
 <Typography variant="body1" gutterBottom><br/>
 {information.address}, {information.stateAndZip}<br/>
-{information.altPhoneNumber}<br/>
+{usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}<br/>
+{/* {information.altPhoneNumber}<br/> */}
 {information.email}<br/>
 {information.linkedin}<br/>
 {information.github}<br/>
@@ -138,6 +136,10 @@ function CoverLetter({ information, paragraph1, paragraph2, paragraph3, paragrap
 </div>
   )
 }
+
+const whyGoodFit = `Why do you think you are a good fit for this company?`
+
+const whatFreeTime = `Please list 2-3 dates and time ranges that you could do an interview.`
 
 export default Content
 

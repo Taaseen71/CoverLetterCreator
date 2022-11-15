@@ -3,7 +3,7 @@ import {  Document,  Page,  Text,  View, StyleSheet, PDFViewer, Font } from "@re
 
 
 // Create Document Component
-const CreatePDF = ({todayDate, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, information}) => {
+const CreatePDF = ({todayDate, usePhoneNumber, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, information}) => {
     Font.register({
       family: 'Roboto',
       src: 'https://fonts.cdnfonts.com/css/roboto'
@@ -45,7 +45,7 @@ const CreatePDF = ({todayDate, paragraph1, paragraph2, paragraph3, paragraph4, p
             <Page size="A4" style={styles.page}>
               <View style={styles.section}>
                 <Text>{information.address}, {information.stateAndZip}</Text>
-                <Text>{information.altPhoneNumber}</Text>
+                <Text>{usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}</Text>
                 <Text>{information.email}</Text>
                 <Text>{information.linkedin}</Text>
                 <Text>{information.github}</Text>
