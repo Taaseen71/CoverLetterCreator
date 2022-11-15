@@ -156,7 +156,7 @@ const Body = ({setBackgroundColor, background}) => {
                     <Grid container spacing={2}>
                         <Grid xs={12} style={{display: 'flex', justifyContent: 'center'}}>
                             <ToggleButtonGroup
-                                color="secondary"
+                                color="primary"
                                 value={usePhoneNumber}
                                 size="small"
                                 exclusive
