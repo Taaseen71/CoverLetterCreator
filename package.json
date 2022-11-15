@@ -33,6 +33,10 @@
       "react-app/jest"
     ]
   },
+  "overrides": {
+    "@react-pdf/font": "2.2.1",
+    "@react-pdf/pdfkit": "2.1.0"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

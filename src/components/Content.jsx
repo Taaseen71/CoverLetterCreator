@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import MailForInterviewRequest from './MailForInterviewRequest'
-// import { useStateIfMounted } from "use-state-if-mounted";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import CopyCoverLetter from './CopyCoverLetter';
 import CreatePDF from './CreatePDF';
 import axios from "axios";
 import {Button, Typography} from '@mui/material';
+import CreateResume from './CreateResume';
+
 
 
 function Content({ positionName, companyName, extraComments, todayDate, usePhoneNumber, usePrimaryAddress }) {
@@ -18,17 +19,20 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
   const [information, setInformation] = useState("")
   const [whatFreeTimeAnswer, setWhatFreeTimeAnswer] = useState("")
   const [whyGoodFitAnswer, setWhyGoodFitAnswer] = useState("")
+  const [unmounted, setUnmounted] = useState(true)
 
   const [coverLetterClipboard, setCoverLetterClipboard] = useState({
     value: "",
     copied: false
   })
 
-  useEffect(() => {   
+  useEffect(() => {  
+    setUnmounted(false) 
     GetFile()
     return () => {
+      setUnmounted(true)
     }
-  }, [extraComments, companyName, positionName])
+  }, [extraComments, companyName, positionName, unmounted])
 
   const GetFile = () => {
     axios.get('/CoverLetterContent.json').then(response => {
@@ -106,6 +110,12 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
         <p>{whatFreeTimeAnswer}</p>
       </div>
       <MailForInterviewRequest positionName={positionName} companyName={companyName} />
+      <CreateResume 
+        address={usePrimaryAddress ? information.altAddress : information.address} 
+        stateAndZip={usePrimaryAddress? information.altStateAndZip : information.stateAndZip} 
+        phoneNumber={usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}
+        
+      />
     </div>
 
   )

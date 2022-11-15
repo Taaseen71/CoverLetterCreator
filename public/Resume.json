@@ -1,0 +1,119 @@
+{
+    "title": "Saadat Taaseen",
+    "experience": [
+        {
+            "title": "Full Stack Engineer",
+            "date": "Jul 2022 - Present",
+            "company": "DatafuelX",
+            "location": "Manhattan, NY",
+            "website": "",
+            "industry": "",
+            "responsibilities": [
+                "​Created Full Stack website using Vue JS framework for client-facing interaction with advertising companies.", 
+                "Hosted website on AWS with S3 buckets and performed routine deployments with dynamic features.", 
+                "Connected and interacted with backend APIs' for authentication and RESTful web services in a fast-paced Agile Environment.",
+                "Created data structures and plug-and-play features to maximize versatility for clients looking for Software as a Service packages.",
+                "Followed Object Oriented Programming (OOP) to create and edit features in the application.",
+                "Created Docker Images for production and secured investments of about 30% more than projected.",
+                "Deployed website with frequent updates and Increased customer-to-business interaction by 25%."
+            ]
+        },
+        {
+            "title": "Full Stack Software Engineer",
+            "date": "Nov 2021 - Jun 2022",
+            "company": "CareerMD - Elevation Health Group",
+            "location": "New York, NY",
+            "website": "https://careermd.com/",
+            "industry": "Healthcare",
+            "responsibilities": [
+                "Created 37 webpages on Vue/TypeScript with REST API asynchronous integration.",
+                "Worked directly with the Co-Founder, Lead Developer, and Chief Operating Officer in a highly functional, fast-paced environment to create microservices, and web pages and improve web security and authorization for two healthcare companies and a recruiting company simultaneously.",
+                "Created dynamic web pages using VueJS, Python, and DotNet framework, increasing website traffic and engagement by 30% according to google analytics. Worked in charge of IT and ticketing systems to help clients and employees resolve issues.",
+                "Increased work efficiency by 23%, and improved security flaws that expose databases to online threats.",
+                "Created AWS EC2 instances and added public servers using Docker images that access documents from AWS S3 buckets periodically using cron jobs, allowing for a 50% decrease in time spent on manual tasks. Used Sequel servers to frequently create, read, update and delete entries for clients and career fair events.",
+                "Created authenticated micro-services using REST APIs which allow employees to access information from the company databases, and created AWS EC2 instances to add public servers using Docker images that access documents from AWS S3 buckets periodically using chron-jobs, allowing for a 50% increase in productivity and automation."
+            ]
+        },
+        {
+            "title": "Remote Software Engineer",
+            "date": "Jan 2021 - Nov 2021",
+            "company": "Tred Earth",
+            "location": "Leeds, UK",
+            "website": "https://www.tred.earth/",
+            "industry": "Banking",
+            "responsibilities": [
+                "An essential stakeholder in workflow and lifecycle decisions made with founders and as Project Lead for 3 other developers to deliver projects within a precise deadline to hit a crowdfunding goal of over 30,000 people.",
+                "Produced efficient and elegant code to increase website traffic and engagement by 20%, measured through google analytics.",
+                "Testing and deployment in an agile environment, troubleshooting, debugging, maintaining, and improving existing code, designing new pages, experimental features, and seasonal components, and deploying to production."
+            ]
+        },
+        {
+            "title": "Software Engineering Fellow",
+            "date": "Feb 2020 - June 2020",
+            "company": "General Assembly",
+            "location": "New York Metropolitan Area, NY",
+            "website": "",
+            "industry": "",
+            "responsibilities": [
+                "Completed 18 weeks of Full Stack Web Development training. I learned how to:",
+                "Write REST APIs, call third-party APIs, deploy backend servers, and authenticate users and API calls.",
+                "Build full-stack web applications with the Model-View-Controller framework.",
+                "Collaborate with UX / UI designers to create functional and responsive websites.",
+                "Create code in multiple programming languages and frameworks, such as React, Vue, Ruby on Rails, and Node / Express JS."
+            ]
+        }
+    ],
+    "skills": ["Vue", "React", "React Native", "TypeScript", "JavaScript", "C Programming", "AWS", "EC2", "S3", "Route 53", "GIT", "CRUD", "Node JS", "Express JS", "Ruby On Rails", ".NET Core", "MySQL", "SQLite", "PostgreSQL", "MongoDB", "Firebase", "Docker", "JSON", "Chron Jobs", "Spreadsheets", "Adobe XD", "Terminal", "Visual Studio Code", "Agile Scrum Development", "Vuex", "Next JS", "Nuxt JS", "REST API", "Postman", "HTML", "CSS", "Axios", "Sass", "Bootstrap / Material UI / Vuetify", "Dom Manipulation", "Heroku", "Netlify"],
+    "education": [
+        {
+            "accomplishment": "Certificate",
+            "subject": "Software Engineering Immersive",
+            "date":"Feb 2020 - Jun 2020",
+            "school": "General Assembly",
+            "locationAbbr": "NY"
+        },
+        {
+            "accomplishment": "Bachelor of Science",
+            "subject": "",
+            "date":"Dec 2015",
+            "school": "SUNY Stony Brook",
+            "locationAbbr": "NY"
+        },
+        {
+            "accomplishment": "Associates in Science, Chemical Engineering",
+            "subject": "",
+            "date":"Jun 2013",
+            "school": "CUNY Hostos CC",
+            "locationAbbr": "NY"
+        }
+    ],
+    "projects": {
+        "subtitle": "All projects are viewable through the following link:  https://saadt.netlify.app/",
+        "projects": [
+            {
+                "name": "Saad Photography",
+                "languages": "React and AWS S3",
+                "description": "Created a website with AWS S3 Bucket hosting.",
+                "link": "https://saad-photography.netlify.app/"
+            },
+            {
+                "name": "Instagram Clone",
+                "languages": "React and Firebase",
+                "description": "Created a photo hosting website that uses Firebase web security and database to create, edit and delete users, posts and comments.",
+                "link": "https://instaclone-saad.netlify.app/"
+            },
+            {
+                "name": "Compostrack",
+                "languages": "React, Mapbox and NodeJS",
+                "description": "Worked with UX/UI designers to create a website with authentication, functional map, geolocations, address search, and a “Pin” bookmarking feature.",
+                "link": ""
+            },
+            {
+                "name": "Music-App",
+                "languages": "React",
+                "description": "A Music app created using React.js that displays currently playing music, and a library of songs that can be selected. The website features a beautiful User Interface and SASS extensions for better CSS usability.",
+                "link": "https://saad-music-app.netlify.app/"
+            }
+        ]
+    }
+}
