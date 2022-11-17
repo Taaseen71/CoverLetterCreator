@@ -1,12 +1,12 @@
 {
-    "CoverLetterContent": {
+    "coverLetterContent": {
         "paragraph1": "Your description of the work responsibilities for the role very closely matches my experiences, and I am excited to submit my resume to you for your consideration. ",
 
         "paragraph2": "In my position as a Software Developer for my previous company, I have led, managed, and overseen projects as well as created web pages, with RESTful APIs and authentication, and improved web security and code structures. I have worked by myself, and with other developers, and clients to deliver accurate designs and dynamic web pages. I have very strong leadership skills, and I am adaptive to any kind of environment or task. I have experience shipping and deploying codebases, such as JavaScript, Vue w/ TypeScript, React, Node JS, Ruby on Rails, and WordPress, and have worked directly with founders, to deliver working websites. ",
 
         "paragraph3": "I have extensive practice and experience working within an agile team environment and have worked with both relational and non-relational databases, such as MongoDB, MySQL, Firebase, etc. I have a good concept of CORS, web browsing security, and handling RESTful API requests using the Node-Express framework.",
         
-        "paragraph4": "I have a proven track record of working in a dynamic environment with the ability to manage multiple projects and work with tight deadlines. I have worked closely with the founders of my current company. I have provided elaborate insights into the development process to help them assess situations and make important decisions for the company. ",
+        "paragraph4": "As a Software Engineer, I assure you, that I am so much more than what my resume shows. I am honest, and I value my work ethics and productivity. I am not in this industry by chance, but sheer hard work, and dedication, and I am always looking for ways to learn and educate myself to be more efficient and deliver better content for my employers. I have a proven track record of working in a dynamic environment with the ability to manage multiple projects and work with tight deadlines. I have worked closely with the founders of my current company. I have provided elaborate insights into the development process to help them assess situations and make important decisions for the company. ",
         
         "paragraph5": "I am confident that my excellent work ethic, unparalleled attention to detail, and high-performing skills will make me an exceptional candidate for this role, and allow me to contribute to the team's success. I have endorsements from my previous employers and colleagues who vouch for my engineering skills and my ability to adapt to any situation. I am excited to meet your team and work with them to the fullest of my abilities. As I plan my career to become a better engineer, I look forward to an opportunity to discuss both your biggest needs and how I may offer solutions to your team. If I can provide you with any further information on my background and qualifications, please let me know.",
         "paragraph6": "I look forward to hearing from you regarding this role. Thank you so much for your consideration."
@@ -14,5 +14,20 @@
     "misc": {
         "whyGoodFitAnswer": "I work extremely well under pressure. I am primarily here to learn all that I can, and apply that knowledge to my role, and help the team and the company achieve its goals. I intend to deliver results as soon as I join the team, and immediately prove that I am an asset. I have a lot of experience with data analysis and believe my skills and technical ability will help the company exceed their expectations.",
         "whatFreeTimeAnswer": "Weekdays, 11:00 am - 7:00 pm"
+    },
+    "information": {
+        "address": "Queens, New York",
+        "altAddress": "New York Metropolitan Area",
+        "stateAndZip": "NY-11429",
+        "altStateAndZip": "NY-10010",
+        "phoneNumber": "+1 (347) 600-4353",
+        "altPhoneNumber": "+1 (540) 753-1951",
+        "email": "dev.saadat@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/taaseen71/",
+        "github": "https://github.com/Taaseen71/",
+        "portfolio": "https://saadt.netlify.app/",
+        "intro": "Dear Hiring Manager",
+        "outro": "Sincerely",
+        "name": "Saadat Taaseen"
     }
 }

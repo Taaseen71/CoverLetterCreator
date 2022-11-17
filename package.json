@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.12",
+    "@react-pdf/renderer": "^3.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,7 +17,9 @@
     "react-copy-to-clipboard": "^5.0.3",
     "react-datasheet": "^1.4.9",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "^2.0.0",
+    "use-state-if-mounted": "^1.0.7",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -25,6 +33,10 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "overrides": {
+    "@react-pdf/font": "2.2.1",
+    "@react-pdf/pdfkit": "2.1.0"
   },
   "browserslist": {
     "production": [

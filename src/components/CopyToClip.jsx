@@ -1,5 +1,6 @@
 import React from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import {Button} from '@mui/material';
 
 function CopyToClip({ copiedToClipboard, setCopiedToClipboard, positionName, companyName, link }) {
   return (
@@ -11,7 +12,7 @@ function CopyToClip({ copiedToClipboard, setCopiedToClipboard, positionName, com
           text={`${positionName}\t${companyName}\t${link}`}
           onCopy={() => setCopiedToClipboard({ ...copiedToClipboard, copied: true })}
         >
-          <button>Copy for Excel</button>
+          <Button variant="contained">Copy for Excel</Button>
         </CopyToClipboard>
       </div>
     </div>
