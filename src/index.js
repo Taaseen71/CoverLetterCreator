@@ -2,10 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import EditResume from './components/EditResume';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Route,
+} from "react-router-dom";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/edit-resume",
+    element: <EditResume/>
+  }
+]);
+
+
 
 ReactDOM.render(
-  <App />,
+  <RouterProvider router={router} />,
   document.getElementById('root')
 );
 

@@ -6,6 +6,7 @@ import CreatePDF from './CreatePDF';
 import axios from "axios";
 import {Button, Typography} from '@mui/material';
 import CreateResume from './CreateResume';
+import {Link} from "react-router-dom"
 
 
 
@@ -20,6 +21,9 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
   const [whatFreeTimeAnswer, setWhatFreeTimeAnswer] = useState("")
   const [whyGoodFitAnswer, setWhyGoodFitAnswer] = useState("")
   const [unmounted, setUnmounted] = useState(true)
+  const [resumeDetails, setResumeDetails] = useState({})
+  const [showResume, changeShowResume] = useState(false)
+  const [showCoverLetterPDF, changeShowCoverLetterPDF] = useState(false)
 
   const [coverLetterClipboard, setCoverLetterClipboard] = useState({
     value: "",
@@ -29,6 +33,7 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
   useEffect(() => {  
     setUnmounted(false) 
     GetFile()
+    GetResume()
     return () => {
       setUnmounted(true)
     }
@@ -47,7 +52,11 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
       setWhyGoodFitAnswer(response.data.misc.whyGoodFitAnswer)
     })
   }
-  
+  const GetResume = async () => {
+    const {data} = await axios.get('/Resume.json')
+    // console.log(data);
+    setResumeDetails(data)
+  }
 
 
 
@@ -80,23 +89,31 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
           <Button variant="contained">Copy Cover Letter</Button>
         </CopyToClipboard>
         <br />
-        <CreatePDF
-          positionName={positionName}
-          companyName={companyName}
-          extraComments={extraComments}
-          todayDate={todayDate}
-          usePhoneNumber={usePhoneNumber}
-          usePrimaryAddress={usePrimaryAddress}
-          paragraph1={paragraph1}
-          paragraph2={paragraph2}
-          paragraph3={paragraph3}
-          paragraph4={paragraph4}
-          paragraph5={paragraph5}
-          paragraph6={paragraph6}
-          information={information}
-          />
+
+        <div>
+          <Button variant="contained" color="error" onClick={()=>{changeShowCoverLetterPDF(!showCoverLetterPDF)}}>
+            {showCoverLetterPDF ? 'Hide Cover Letter PDF' : 'Show Cover Letter PDF'}
+          </Button>
+          {showCoverLetterPDF && 
+              <CreatePDF
+              positionName={positionName}
+              companyName={companyName}
+              extraComments={extraComments}
+              todayDate={todayDate}
+              usePhoneNumber={usePhoneNumber}
+              usePrimaryAddress={usePrimaryAddress}
+              paragraph1={paragraph1}
+              paragraph2={paragraph2}
+              paragraph3={paragraph3}
+              paragraph4={paragraph4}
+              paragraph5={paragraph5}
+              paragraph6={paragraph6}
+              information={information}
+              />
+          }
+          </div>
       </div> 
-      
+     
       <div style={{paddingTop: '100px'}}>  
         <h2> Why are you Interesting?</h2>
         <p>{whyGoodFit}</p>
@@ -110,12 +127,24 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
         <p>{whatFreeTimeAnswer}</p>
       </div>
       <MailForInterviewRequest positionName={positionName} companyName={companyName} />
-      <CreateResume 
-        address={usePrimaryAddress ? information.altAddress : information.address} 
-        stateAndZip={usePrimaryAddress? information.altStateAndZip : information.stateAndZip} 
-        phoneNumber={usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}
-        
-      />
+
+      <div style={{display:"flex", flexDirection: "column", alignItems:"center"}}>
+          <Button variant="outlined" color="error" style={{margin: '10px'}} onClick={()=>{changeShowResume(!showResume)}}>
+            {showResume ? 'Hide Resume' : 'Show Resume'}
+          </Button>
+
+          {showResume && 
+              <CreateResume 
+              address={usePrimaryAddress ? information.altAddress : information.address} 
+              stateAndZip={usePrimaryAddress? information.altStateAndZip : information.stateAndZip} 
+              phoneNumber={usePhoneNumber ? information.altPhoneNumber : information.phoneNumber}
+              resumeDetails={resumeDetails}
+              />
+          }
+          <Button variant="contained" color="error" style={{margin: '10px'}}>
+            <Link to="/edit-resume" style={{textDecoration: "none", color: "white"}}>Edit Resume</Link>
+          </Button>
+      </div>
     </div>
 
   )

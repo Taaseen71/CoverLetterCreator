@@ -71,16 +71,16 @@ const styles = StyleSheet.create({
     }
 });
 
-const CreateResume = ({address, stateAndZip,phoneNumber}) => {
+const CreateResume = ({address, stateAndZip,phoneNumber, resumeDetails}) => {
 
     const [coverLetterDetails, setCoverLetterDetails] = useState({})
-    const [resumeDetails, setResumeDetails] = useState({})
+    // const [resumeDetails, setResumeDetails] = useState({})
     const [unmounted, setUnmounted] = useState(true)
 
     useEffect(() => {   
         setUnmounted(false);
         GetCoverLetter()
-        GetResume();
+        // GetResume();
         return function () {
             setUnmounted(true);
         };
@@ -92,11 +92,11 @@ const CreateResume = ({address, stateAndZip,phoneNumber}) => {
         setCoverLetterDetails(data && data.information)
       }
 
-      const GetResume = async () => {
-        const {data} = await axios.get('/Resume.json')
-        // console.log(data);
-        setResumeDetails(data)
-      }
+    //   const GetResume = async () => {
+    //     const {data} = await axios.get('/Resume.json')
+    //     // console.log(data);
+    //     setResumeDetails(data)
+    //   }
 
   return (
     <PDFViewer style={styles.viewer}>
