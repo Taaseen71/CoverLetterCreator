@@ -10,8 +10,8 @@ const EditResume = () => {
 
     const [information, setInformation] = useState("")
     const [unmounted, setUnmounted] = useState(true)
-    const [usePrimaryAddress, setUsePrimaryAddress] = useState(false)
-    const [usePrimaryPhoneNumber, setUsePrimaryPhoneNumber] = useState(false)
+    const [usePrimaryAddress, setUsePrimaryAddress] = useState(1)
+    const [usePrimaryPhoneNumber, setUsePrimaryPhoneNumber] = useState(1)
     const [resumeDetails, setResumeDetails] = useState({})
     const [showAddSkill, setShowAddSkill] = useState(false);
     const [newSkill, setNewSkill] = useState("")
