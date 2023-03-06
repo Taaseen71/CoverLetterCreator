@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
 const CreateResume = ({address, stateAndZip,phoneNumber, resumeDetails}) => {
 
     const [coverLetterDetails, setCoverLetterDetails] = useState({})
-    // const [resumeDetails, setResumeDetails] = useState({})
     const [unmounted, setUnmounted] = useState(true)
 
     useEffect(() => {   
@@ -91,12 +90,6 @@ const CreateResume = ({address, stateAndZip,phoneNumber, resumeDetails}) => {
         // console.log(data)
         setCoverLetterDetails(data && data.information)
       }
-
-    //   const GetResume = async () => {
-    //     const {data} = await axios.get('/Resume.json')
-    //     // console.log(data);
-    //     setResumeDetails(data)
-    //   }
 
   return (
     <PDFViewer style={styles.viewer}>
@@ -164,6 +157,22 @@ const CreateResume = ({address, stateAndZip,phoneNumber, resumeDetails}) => {
                         )
                     })}
                 </div>
+                {resumeDetails.hobbies && resumeDetails.hobbies.length > 0 && (
+                        <div style={{...styles.paragraphBreak}}>
+                            <Text style={{...styles.header1}}>Hobbies</Text>
+                            <Text>
+                                {resumeDetails.hobbies.map(hobby => {
+                                    if(resumeDetails.hobbies.indexOf(hobby)===resumeDetails.hobbies.length-1){
+                                        return hobby
+                                    }
+                                    else{
+                                        return `${hobby},`
+                                    }
+                                })}
+                            </Text>
+                        </div>
+                    )
+                }
             </View>
         </Page>
         </Document>
