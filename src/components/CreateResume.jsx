@@ -106,9 +106,9 @@ const CreateResume = ({address, stateAndZip,phoneNumber, resumeDetails}) => {
         <Page size="legal" style={styles.page}>
             <View style={styles.section}>
                 <div style={{...styles.title, ...styles.paragraphBreak}}>
-                    <Text>{resumeDetails.title}</Text>
+                    <Text style={{...styles.header1}}>{resumeDetails.title}</Text>
                     <Text>{address}, {stateAndZip} | {phoneNumber}</Text>
-                    <Text>{coverLetterDetails.email} | {coverLetterDetails.portfolio}</Text>
+                    <Text>{coverLetterDetails.email} | {coverLetterDetails.portfolio} | {coverLetterDetails.linkedin} | {coverLetterDetails.github}</Text>
                 </div>
                 <div style={{...styles.paragraphBreak}}>
                     <Text style={{...styles.header1}}>Experience</Text>
@@ -126,15 +126,21 @@ const CreateResume = ({address, stateAndZip,phoneNumber, resumeDetails}) => {
                 </div>
                 <div style={{...styles.paragraphBreak}}>
                     <Text style={{...styles.header1}}>Skills</Text>
-                    <Text>{resumeDetails.skills && resumeDetails.skills.map(skill => {
-                        if (resumeDetails.skills.indexOf(skill) === resumeDetails.skills.length-1){
-                            return `${skill}`
-                        }
-                        else {
-                            return `${skill}, `
-                        }
+                    {resumeDetails.skills && resumeDetails.skills.map(skill => {
+                        return(
+                                <Text>
+                                    {skill.type}: {skill.list && skill.list.map(skName => {
+                                        // return skName
+                                        if(skill.list.indexOf(skName) === skill.list.length-1){
+                                            return skName
+                                        }
+                                        else{
+                                            return `${skName}, `
+                                        }
+                                    })}
+                                </Text>
+                        )
                     })}
-                    </Text>
                 </div>
                 <div style={{...styles.paragraphBreak}}>
                     <Text style={{...styles.header1}}>Education</Text>
