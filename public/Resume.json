@@ -66,11 +66,15 @@
         },
         {
             "type":"Tools",
-            "list": ["React", "React-Native", "Vue", "Node.js", "Express", "Ruby on Rails", "Git", "PostgreSQL", "MongoDB"]
+            "list": ["React", "React-Native", "Vue", "Node.js", "Express", "Ruby on Rails", "Git", "AWS"]
+        },
+        {
+            "type":"Database",
+            "list": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "SQLite"]
         },
         {
             "type":"Experience",
-            "list": ["Full Stack Development", "AWS", "RESTful APIs", "Authentication", "CRUD operations", "Axios"]
+            "list": ["Full Stack Development", "RESTful APIs", "Authentication", "CRUD operations", "Axios", "NextJS", "JSON", "Vuex", "React-Redux", "Bootstrap / Material UI / Vuetify"]
         }
     ],
     "education": [
@@ -103,28 +107,29 @@
                 "name": "Saad Photography",
                 "languages": "React and AWS S3",
                 "description": "Created a website with AWS S3 Bucket hosting.",
-                "link": "www.photography.saadt.dev"
+                "link": "https://photography.saadt.dev"
             },
             {
                 "name": "Instagram Clone",
                 "languages": "React and Firebase",
                 "description": "Created a photo hosting website that uses Firebase web security and database to create, edit and delete users, posts and comments.",
-                "link": "www.instaclone-saad.netlify.app"
+                "link": "https://instaclone-saad.netlify.app"
             }, 
             {
                 "name": "Compostrack",
                 "languages": "React, Mapbox and NodeJS",
                 "description": "Worked with UX/UI designers to create a website with authentication, functional map, geolocations, address search, and a “Pin” bookmarking feature.",
-                "link": ""
+                "link": "https://compostrack.netlify.app/"
             },
             {
                 "name": "Music-App",
                 "languages": "React",
                 "description": "A Music app created using React.js that displays currently playing music, and a library of songs that can be selected. The website features a beautiful User Interface and SASS extensions for better CSS usability.",
-                "link": "www.saad-music-app.netlify.app"
+                "link": "https://trance.saadt.dev"
             }
         ]
     },
+    "hobbies": [],
     "JSON Commented Info": [
         {
             "title": "Software Engineering Fellow",
