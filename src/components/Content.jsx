@@ -80,18 +80,19 @@ function Content({ positionName, companyName, extraComments, todayDate, usePhone
           information={information}
         />
 
-        <CopyToClipboard
-          style={{marginBottom: 50}} 
-          options={{ format: "text/plain" }}
-          text={CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber, usePrimaryAddress)}
-          onCopy={() => setCoverLetterClipboard({ ...coverLetterClipboard, copied: true })}
-        >
-          <Button variant="contained">Copy Cover Letter</Button>
-        </CopyToClipboard>
+          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <CopyToClipboard 
+              options={{ format: "text/plain" }}
+              text={CopyCoverLetter(todayDate, information, paragraph1, paragraph2, paragraph3, paragraph4, paragraph5, paragraph6, usePhoneNumber, usePrimaryAddress)}
+              onCopy={() => setCoverLetterClipboard({ ...coverLetterClipboard, copied: true })}
+            >
+                <Button fullWidth={false} variant="contained">Copy Cover Letter</Button>
+            </CopyToClipboard>
+          </div>
         <br />
 
-        <div>
-          <Button variant="contained" color="error" onClick={()=>{changeShowCoverLetterPDF(!showCoverLetterPDF)}}>
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection:"column", alignItems: 'center'}}>
+          <Button  style={{marginBottom: '20px', width: 'auto'}}  variant="contained" color="error" onClick={()=>{changeShowCoverLetterPDF(!showCoverLetterPDF)}}>
             {showCoverLetterPDF ? 'Hide Cover Letter PDF' : 'Show Cover Letter PDF'}
           </Button>
           {showCoverLetterPDF && 
