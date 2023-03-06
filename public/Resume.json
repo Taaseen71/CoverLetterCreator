@@ -7,7 +7,7 @@
             "company": "DatafuelX",
             "location": "Manhattan, NY",
             "website": "",
-            "industry": "",
+            "industry": "Ad-Tech",
             "responsibilities": [
                 "Created Front-end website using Vue JS framework for client facing interaction.", 
                 "Hosted website on AWS S3 buckets and performed routine deployments with updated features.", 
